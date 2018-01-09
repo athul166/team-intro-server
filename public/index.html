@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Rapid Solution</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="css/simple-line-icons.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="css/style1.css">
+	<!-- <style media="screen">
+		#maindiv {
+	    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+	    transition: width 2s;
+	}
+		#maindiv:hover {
+	    width: 50%;
+	}
+		#maindiv:hover ~ #hide{
+	    display: none;
+	 }
+	</style> -->
+	<!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+	<link rel="stylesheet" id="theme-switch" href="css/style.css">
+	<style media="screen">
+	.modal.fade{
+		opacity:1;
+		}
+	.modal.fade .modal-dialog {
+	 -webkit-transform: translate(0);
+	 -moz-transform: translate(0);
+	 transform: translate(0);
+	}
+	#M13:hover{
+		cursor: pointer;
+	}
+	::-webkit-scrollbar
+	{
+	    width: 0px;
+	}
+	::-webkit-scrollbar-track-piece
+	{
+	    background-color: transparent;
+	    -webkit-border-radius: 6px;
+	}
+	</style>
+	<!-- End demo purposes only -->
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<script>
+      window.sr = ScrollReveal();
+  </script>
+	<script type="text/javascript">
+		const info = {
+			member1 : {
+				name: "Mohan Kumar",
+				image: "images/Mohan.png",
+				description: "Mohan has 14 years of IT experience working in various facets of technologies. He has played the roles of a Developer,a Middleware Administrator/Architect and a Technical Lead. He is the Technical Point of Contact for the Rapid Solution team and also wears the hat of a Scrum Master. He plays a vital role in making sure the team is equipped with the required logistics to complete a development. "
+			},
+			member2 : {
+				name: "Rubanraj",
+				image: "images/Ruban4.png",
+				description: "Tech Stack - MERN, NLP Platforms, Python"
+			},
+			member3 : {
+				name: "Prateek",
+				image:"images/Prateek.png",
+				description: "Tech Stack - MERN, Docker, NLP Platforms."
+			},
+			member4 : {
+				name: "Shubham",
+				image:"images/Shubham.png",
+				description: "Tech Stack- MERN, Kubernetees, Selenium."
+			},
+			member5 : {
+				name: "Srini",
+				image:"images/Srini1.png",
+				description: "Tech Stack - MERN, UI/UX Design, Redux, Neo4J."
+			},
+			member6 : {
+				name: "Athul",
+				image:"images/Athul1.png",
+				description: "MERN, Docker, RabbitMQ, UX/UI Design, PS."
+			},
+			member7 : {
+				name: "Akila",
+				image:"images/Akila3.png",
+				description: "Tech Stack - MERN, Docker, Jenkins, RabbitMQ"
+			},
+			member8 : {
+				name: "Tharun",
+				image:"images/tarun.png",
+				description: "Tech Stack - MERN, AWS (EC2), Saucelabs, Blaizemeter."
+			},
+			member9 : {
+				name: "Navin",
+				image:"images/navin.png",
+				description: "Tech Stack - MERN, Cloud computing, SonarQube."
+			},
+			member10 : {
+				name: "Aswini K",
+				image:"images/aswini2.png",
+				description: "MERN, Avaamo, Mocha, Chai, Supertest."
+			},
+			member11 : {
+				name: "Aswini H",
+				image:"images/aswini.png",
+				description: "Tech Stack - MERN, Grommet, Selinium, Packery, Blockchain."
+			},
+			member12 : {
+				name: "Manisha",
+				image:"images/manisha1.png",
+				description: "Tech Stack - MERN, Python."
+			},
+			member13 : {
+				name: "Lakhveer",
+				image:"images/lakveer.png",
+				description: "Tech Stack - MERN, Java."
+			}
+		}
+		window.memberSwap = function(clicked_id,source,name){
+			// alert(source);
+			document.getElementById(clicked_id).src = document.getElementById("M13").src;
+			document.getElementById(clicked_id).alt = document.getElementById("M13").alt;
+			document.getElementById("M13").src = source;
+			document.getElementById("M13").alt = name;
+			document.getElementById('modalimg').src = source;
+			for (var member in info) {
+				if (info[member].name == name) {
+					// alert(info[member].name);
+					document.getElementById('modalname').innerHTML = info[member].name;
+					document.getElementById('modaldescription').innerHTML = info[member].description;
+					document.getElementById('P1').innerHTML= info[member].name;
+				}
+			}
+		}
+		window.testAnim = function(x) {
+				alert(x);
+		    $('.modal .modal-dialog').attr('class', 'modal-dialog  ' + x + '  animated');
+		}
+		$('#myModal').on('show.bs.modal', function (e) {
+		  var anim = 'zoomInUp';
+		      testAnim(anim);
+		});
+		$('#myModal').on('hide.bs.modal', function (e) {
+		  var anim = 'rollOut';
+		      testAnim(anim);
+		});
+
+	</script>
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<header role="banner" id="fh5co-header">
+			<div class="container">
+				<!-- <div class="row"> -->
+			    <nav class="navbar navbar-default">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		          	<a class="navbar-brand" href="index.html" style="margin-bottom: -23px;"> <img src="./images/rsLogo.png" alt="team logo" style="width: 100px; float: left; margin-top: -20px; margin-left: -30px;" /> Rapid Prototyping Team</a>
+								<p style="font-size:16px; font-style: italic; color: #FFF;margin-left: 70px; margin-top: -27px; margin-bottom: 2px;">From Concept to Reality</p>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse" style="background-color:">
+		          <ul class="nav navbar-nav navbar-right">
+		            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+		            <li><a href="#" data-nav-section="engage"><span>How to Engage</span></a></li>
+		            <li><a href="#" data-nav-section="about"><span>About us</span></a></li>
+								<li><a href="#" data-nav-section="team"><span>Team</span></a></li>
+		            <li><a href="#" data-nav-section="services"><span>Stack & Techs</span></a></li>
+		            <li><a href="#" data-nav-section="testimonials"><span>Projects</span></a></li>
+		            <li><a href="#" data-nav-section=""><span>More</span></a></li>
+		          </ul>
+		        </div>
+			    </nav>
+			  <!-- </div> -->
+		  </div>
+	</header>
+
+	<div id="slider" data-section="home">
+		<div class="owl-carousel owl-carousel-fullwidth">
+			<!-- You may change the background color here. -->
+				<div class="item" style="background-image:url(images/team.jpg)">
+					<div class="overlay"></div>
+					<div class="container" style="position: relative;">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1 text-center">
+								<div class="fh5co-owl-text-wrap">
+									<div class="fh5co-owl-text">
+										<!-- <h1 class="fh5co-lead to-animate">Who are we?</h1> -->
+										<h2 class="fh5co-sub-lead to-animate">We are a Young result-oriented team with the hunger level of a start up …</h3>
+											<!-- <p class="to-animate-2"><a href="http://freehtml5.co/" target="_blank" class="btn btn-primary btn-lg">Download This Template</a></p> --><br/>
+										<!-- <p class="to-animate" style="color:#fff;font-weight: 100;">Why “Flash Ninjas”? – because we are agile and swift like a ninja, and we develop solutions in a flash.</p> -->
+									</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- You may change the background color here.  -->
+		    <div class="item" style="background-image:url(images/team1.jpg)">
+					<div class="overlay"></div>
+		    	<div class="container" style="position: relative;">
+		    		<div class="row">
+		    			<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5">
+			    			<div class="fh5co-owl-text-wrap">
+						    	<div class="fh5co-owl-text">
+						    		<h1 class="fh5co-lead to-animate">Rapid Prototyping Team</h1>
+										<h2 class="fh5co-sub-lead to-animate"> Building solution to real world business problems of our customers under Customer BU, using an agile, iterative methodology to demonstrate the art of possible.</h3>
+									</div>
+						    </div>
+					    </div>
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+	<div id="fh5co-our-services" data-section="engage">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate" style="color:#000;">How To Engage</h3>
+				</div>
+			</div>
+			<div class="row" style="margin-left: 40px;">
+					<div class="col-md-5 to-animate">
+							<img src="./images/submit.png" class="img-responsive" alt="">
+					</div>
+					<div class="col-md-1 to-animate" style="margin-top: 45px;">
+						<img src="./images/arrow-right.png" class="img-responsive" alt="">
+					</div>
+					<div class="col-md-5 to-animate">
+						<img src="./images/signoff.png" class="img-responsive" alt="">
+					</div>
+			</div>
+			<div class="row" style="margin-left: 40px;">
+					<div class="col-md-5 to-animate">
+						<img src="./images/stories.png" class="img-responsive" alt="">
+					</div>
+					<div class="col-md-1 to-animate" style="margin-top: 55px;">
+						<img src="./images/arrow-right.png" class="img-responsive" alt="">
+					</div>
+					<div class="col-md-5 to-animate">
+						<img src="./images/assign.png" class="img-responsive" alt="">
+					</div>
+			</div>
+			<div class="row" style="margin-left: 40px;">
+					<div class="col-md-5 col-md-offset-3 to-animate">
+						<img src="./images/deliver.png" class="img-responsive" alt="">
+					</div>
+			</div>
+			<div class="row">
+				<center>
+					<p class="to-animate " style="margin:auto;margin-top:20px;">To engage with the team, Please submit the Opportunity  <a href="./opportunitySubmission.html">here</a></p>
+				</center>
+			</div>
+		</div>
+	</div>
+	<div id="fh5co-about-us" data-section="about">
+		<div class="container">
+			<div class="row row-bottom-padded-lg" id="about-us">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">About Us</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate">
+							<!--<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3> -->
+						</div>
+					</div>
+				</div>
+					<!-- <img src="images/img_1.jpg" class="img-responsive img-rounded" alt="Free HTML5 Template"> -->
+<!-- 					<video width="100%" height="100%" autoplay loop>
+					  <source src="rapsol.mp4" type="video/mp4" />
+					</video> -->
+				<div class="col-md-8 col-sm-12 to-animate">
+					<div class="embed-responsive embed-responsive-16by9">
+					  <!-- <iframe src="https://player.vimeo.com/video/249635594"></iframe> -->
+						<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/249900476?loop=1&color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0"></iframe>
+						<!-- <iframe src="https://player.vimeo.com/video/249635594?color=ffffff&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+					</div>
+<!-- 					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/P7lj4H6Nuvk?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
+					<!-- <embed src="rapsol.mp4?autoplay=1" width="688" height="387"> -->
+				</div>
+				<div class="col-md-4 to-animate">
+					<h2>How we got started</h2>
+					<p>A Domain Group was set out to selectively pick and choose talents that can Think dynamic, Work Agile and Deliver accuracy. They hunted through the pool of resources in Wipro and selected a first set of 6 Fresh Talents from Digital Academy. They also selected a person to lead the team who has immense experience in various facets of IT. We started off with a 7 member team in the First week of August 2017 and went on to add 6 more in October 2017. The new 6 are no lesser than the first 6; they were also self-sustained.</p>
+				</div>
+			</div>
+			<div class="row" id="team"  data-section="team" style="margin-top:0px;" >
+				<div class="col-md-12 section-heading text-center to-animate">
+					<h2>Team</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-9 col-md-offset-2 to-animate" style="margin-right: 10px;">
+						<h4 class="to-animate">DIGITAL ENABLERS</h3>
+						<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+						<div class="col-md-2 text-center to-animate" style="background-color: #EEB436;margin-right:10px;">
+							<img src="images/sunil.png" id="team1" class="img-responsive" alt="Person">
+								<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+							<h5>Sunil Kuruvath</h5>
+							<h5 style="margin-left:-5px;">Digital Delivery Lead</h5>
+						</div>
+						<div class="col-md-2 text-center to-animate" style="background-color: #3F46AE; margin-right:10px;">
+							<img src="images/random.png" class="img-responsive" alt="Person">
+								<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+							<h5>Ajay Mahajan</h5>
+							<h5>Digital Architect</h5>
+						</div>
+						<div class="col-md-2 text-center to-animate" style="background-color: #4AC29C; margin-right:10px;">
+							<img src="images/random.png" class="img-responsive" alt="Person">
+								<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+							<h5>Sanju John</h5>
+							<h5 style="margin-left:-9px;">Engineering Manager</h5>
+						</div>
+						<div class="col-md-2 text-center to-animate" style="background-color: #593853; margin-right:10px;">
+							<img src="images/random.png" class="img-responsive" alt="Person">
+								<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+							<h5>Vinoth R</h5>
+							<h5 style="margin-left:-9px;">Engineering Manager</h5>
+						</div>
+					</div>
+				</div>
+				<!--  sdafsdfasfs-->
+				<div class="row" style="margin-bottom:10px;">
+					<div class="col-md-9 col-md-offset-2 to-animate">
+						<h4 class="to-animate">DIGITAL OPERATIONS</h3>
+						<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+						<div class="col-md-2 text-center to-animate" style="background-color: #EEB436;margin-right:10px;">
+							<img src="images/random.png" id="team1" class="img-responsive" alt="Person">
+							<h5>Sathish</h5>
+							<h5>Digital Operations</h5>
+								<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+						</div>
+						<div class="col-md-2 text-center to-animate" style="background-color: #3F46AE;">
+							<img src="images/sara.png" class="img-responsive" alt="Person">
+							<h5>Sara Cherian</h5>
+							<h5>Digital Operations</h5>
+							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+						</div>
+					</div>
+				</div>
+				<!-- <div class="row" style="margin-bottom:10px;">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate">
+							<h4 class="to-animate">ENABLERS</h3>
+							<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+						</div>
+					</div>
+					<div class="col-md-2 col-md-offset-2 text-center to-animate" style="background-color: #EEB436; margin-right:10px;">
+						<img src="images/sunil.png" id="team1" class="img-responsive" alt="Person">
+					</div>
+					<div class="col-md-2 text-center to-animate" style="background-color: #3F46AE;margin-right:10px;">
+						<img src="images/random.png" class="img-responsive" alt="Person">
+					</div>
+				</div>
+				<div class="row" style="margin-bottom:10px;">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate">
+							<h4 class="to-animate">OPERATIONS</h3>
+							<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+						</div>
+					</div>
+					<div class="col-md-2 col-md-offset-2 text-center to-animate" style="background-color: #EEB436; margin-right:10px;">
+						<img src="images/random.png" id="team1" class="img-responsive" alt="Person">
+					</div>
+					<div class="col-md-2 text-center to-animate" style="background-color: #3F46AE;margin-right:10px;">
+						<img src="images/sara.png" class="img-responsive" alt="Person">
+					</div>
+				</div> -->
+				<div class="row" style="margin-bottom:10px;">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate">
+							<h4 class="to-animate">ENGINEERING TEAM</h3>
+							<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+						</div>
+					</div>
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="margin-top:7%;">
+					  <div class="modal-dialog" role="document" style="width:50%;">
+							<div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h4 class="modal-title" id="myModalLabel">More Info</h4>
+					      </div>
+					      <div class="modal-body">
+					        <div class="row">
+										<div class="col-md-6">
+											<img src="images/Mohan.png" id="modalimg" class="img-responsive" alt="person">
+										</div>
+										<div class="col-md-6">
+											<h3 id="modalname">Mohan Kumar</h3>
+											<p id="modaldescription">Mohan has 14 years of IT experience working in various facets of technologies. He has played the roles of a Developer,a Middleware Administrator/Architect and a Technical Lead. He is the Technical Point of Contact for the Rapid Solution team and also wears the hat of a Scrum Master. He plays a vital role in making sure the team is equipped with the required logistics to complete a development. </p>
+										</div>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+					<div class="col-md-2 col-md-offset-2 text-center to-animate" style="background-color: #EEB436; margin-right:10px;">
+						<img src="images/Ruban4.png" id="M1" class="img-responsive" alt="Rubanraj" onclick="memberSwap(this.id,this.src,this.alt);">
+							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+					</div>
+					<div class="col-md-2 text-center to-animate" style="background-color: #3F46AE;margin-right:10px;">
+						<img src="images/Prateek.png" id="M2" class="img-responsive" alt="Prateek" onclick="memberSwap(this.id,this.src,this.alt,this.alt);">
+							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+					</div>
+					<div class="col-md-2 text-center to-animate" style="background-color: #593853;margin-right:10px;">
+						<img src="images/Shubham.png" id="M3" class="img-responsive" alt="Shubham" onclick="memberSwap(this.id,this.src,this.alt);">
+							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+					</div>
+					<div class="col-md-2 text-center to-animate" style="background-color: #4AC29C;">
+						<img src="images/Srini1.png" id="M4" class="img-responsive" alt="Srini" onclick="memberSwap(this.id,this.src,this.alt);">
+							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+					</div>
+				</div>
+				<div class="row">
+						<div class="col-md-2 col-md-offset-2 text-center to-animate" id="hide1" style="margin-right:15px;">
+							<div class="row" style="margin-bottom:30px;">
+								<div class="col-md-12 text-center to-animate" style="background-color: #593853;">
+									<img src="images/Athul1.png" id="M5" class="img-responsive" alt="Athul" onclick="memberSwap(this.id,this.src,this.alt);">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 text-center to-animate" style="background-color: #4AC29C;">
+									<img src="images/navin.png" id="M6" class="img-responsive" alt="Navin" onclick="memberSwap(this.id,this.src,this.alt);">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 text-center to-animate grow"  style="background-color: #ffbb00;margin-right:15px;" data-toggle="modal" data-target="#myModal">
+							<img src="images/Mohan.png" id="M13" class="img-responsive" alt="Mohan Kumar">
+							<p id="P1" style="margin-top: -50px;">Mohan Kumar</p>
+						</div>
+						<div class="col-md-2 text-center to-animate" id="hide2">
+							<div class="row" style="margin-bottom:30px;">
+								<div class="col-md-12 text-center to-animate" style="background-color: #593853;">
+									<img src="images/Akila3.png" id="M7" class="img-responsive" alt="Akila" onclick="memberSwap(this.id,this.src,this.alt);">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 text-center to-animate" style="background-color: #3F46AE;">
+									<img src="images/aswini.png" id="M8" class="img-responsive" alt="Aswini H" onclick="memberSwap(this.id,this.src,this.alt);">
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="row" style="margin-top:10px;">
+					<div class="col-md-2 col-md-offset-2 text-center to-animate" style="background-color: #EEB436; margin-right:10px;">
+						<img src="images/tarun.png" id="M9" class="img-responsive" alt="Tharun" onclick="memberSwap(this.id,this.src,this.alt);">
+							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+					</div>
+					<div class="col-md-2 text-center to-animate" style="background-color: #3F46AE;margin-right:10px;">
+						<img src="images/aswini2.png" id="M10" class="img-responsive" alt="Aswini K" onclick="memberSwap(this.id,this.src,this.alt);">
+							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+					</div>
+					<div class="col-md-2 text-center to-animate" style="background-color: #593853;margin-right:10px;">
+						<img src="images/manisha1.png" id="M11" class="img-responsive" alt="Manisha" onclick="memberSwap(this.id,this.src,this.alt);">
+							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
+					</div>
+					<div class="col-md-2 text-center to-animate" style="background-color: #4AC29C;">
+						<img src="images/lakveer.png" id="M12" class="img-responsive" alt="Lakhveer" onclick="memberSwap(this.id,this.src,this.alt);">
+					</div>
+				</div>
+				<script>
+					sr.reveal('.popup4',{ duration: 2000 }, 50);
+					sr.reveal('.popup5',{ duration: 2000 }, 50);
+				</script>
+			</div>
+		</div>
+	</div>
+	<div id="fh5co-our-services" data-section="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate">Stacks and Technologies</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 to-animate">
+							<h3>The current stacks and technologies that our team is working with.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<h4 class="to-animate">UI Framework</h3>
+					<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+					<div class="popup1">
+						<img src="images/UI.jpg" class="img-responsive" alt="UI">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h4 class="to-animate">Microservices Chassis</h3>
+					<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+					<div class="col-md-5">
+						<div class="popup1">
+							<img src="images/nodejs.png" class="img-responsive" alt="UI">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h4 class="to-animate">Data Layer</h3>
+					<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+					<div class="popup1">
+						<img src="images/datalayer.png" class="img-responsive" alt="UI">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<h4 class="to-animate">Integration</h3>
+					<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+					<div class="col-md-6">
+						<div class="popup2">
+							<img src="images/rabbitmq.png" class="img-responsive" alt="UI">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h4 class="to-animate">Platform as a Service</h3>
+					<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+						<div class="popup2">
+							<img src="images/PaaS.png" class="img-responsive" alt="UI">
+						</div>
+				</div>
+				<div class="col-md-4">
+					<h4 class="to-animate">DevOps</h3>
+					<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+					<div class="col-md-8">
+						<div class="popup2">
+							<img src="images/DevOps.png" class="img-responsive" alt="UI">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			sr.reveal('.popup1',{ duration: 2000 }, 50);
+			sr.reveal('.popup2',{ duration: 2000 }, 50);
+			sr.reveal('.popup3',{ duration: 2000 }, 50);
+			sr.reveal('.popup6',{ duration: 2000 }, 50);
+			sr.reveal('.popup7',{ duration: 2000 }, 50);
+			sr.reveal('.popup8',{ duration: 2000 }, 50);
+		</script>
+	</div>
+	<div id="fh5co-testimonials" data-section="testimonials">
+		<div class="timeline-container" id="timeline-1">
+						<div class="row">
+							<div class="col-md-12 section-heading text-center">
+								<h2 class="to-animate">Projects</h2>
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2 subtext to-animate">
+										<h3 style="color:#FFF;"> The host of projects that the team is engaged in finding solutions for...</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+		  <!-- <div class="timeline-header">
+		    <h2 class="timeline-header__title">Mustafa Kemal Atatürk</h2>
+		    <h3 class="timeline-header__subtitle">FATHER OF THE TURKS</h3>
+		  </div> -->
+		  <div class="timeline">
+		    <div class="timeline-item" data-text="Conversational Commerce Bot – Melissa">
+		      <div class="timeline__content"><img class="timeline__img" src="http://cdn.mos.cms.futurecdn.net/tLBznrxvtxZwirU6LcZU9S.jpeg"/>
+		        <h2 class="timeline__content-title"><img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""> <img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""></h2>
+		        <p class="timeline__content-desc">This is a personal assistant sitting behind Google Home which will help in performing online transactions in a retail website using conversations.</p>
+		      </div>
+		    </div>
+		    <div class="timeline-item" data-text="Order Routing System - ORS">
+		      <div class="timeline__content"><img class="timeline__img" src="https://images.yourstory.com/2015/06/India-Post-and-e-commerce.png"/>
+		        <h2 class="timeline__content-title"><img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""> <img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""></h2>
+		        <p class="timeline__content-desc">This is to mimic real world Order Management System using microservices and to decide the least routing algorithm based on distance of the Distribution centre from the customer.</p>
+		      </div>
+		    </div>
+		    <div class="timeline-item" data-text="Airline Application (HTTP)">
+		      <div class="timeline__content"><img class="timeline__img" src="http://www.zagreb-airport.hr/UserDocsImages//kategorije/airlines.jpg"/>
+		        <h2 class="timeline__content-title"><img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""> <img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""></h2>
+		        <p class="timeline__content-desc">1) 1-Click Travel Booking:  <br>
+		          This app uses personality & social status analysis and enables the user with a 1-click travel booking for Flight, Hotel and Rental Car. He can manage his current bookings and also see suggested travel itineraries. <br>
+		          2) Crew Dashboard: <br>
+		          Flight crew can use this application in-flight to serve the passengers. Notifications will be pushed to their dashboard through the data analytics. <br>
+		          3) Persona Analytics: <br>
+		          This gives a bird's eye view of a passenger's personal, social data that the Hospitality and Travel domain partners can use to engage with the customers </p>
+		      </div>
+		    </div>
+		    <div class="timeline-item" data-text="Rule based Inventory Allocation POC">
+		      <div class="timeline__content"><img class="timeline__img" src="https://kissflow.com/wp-content/uploads/2017/08/How-Workflow-Engine-differs-from-Business-Rule-Engine-01.png"/>
+		        <h2 class="timeline__content-title"><img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""> <img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""></h2>
+		        <p class="timeline__content-desc">Purchase Order(PO) allocation to Processing Center(PC) based on flexible rules engine. Once a PO is placed by TJX to a supplier, this rules engine will identify the carrier, mode of delivery (exp/normal), and then apply a few rules based on business needs to deliver them to a PC. ,<br>
+											1) Happy path - Entire PO is sent to one PC <br>
+											2) All rules fail and no delivery scheduled <br>
+											3) Manual allocation overriding rules.</p>
+		      </div>
+		    </div>
+
+		    <div class="timeline-item" data-text="Diageo Sales Analytic">
+		      <div class="timeline__content"><img class="timeline__img" src="http://sweetandchilliproduction.s3.amazonaws.com/media/original_images/diageo1_640x360.jpg"/>
+		        <h2 class="timeline__content-title"><img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""> <img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""></h2>
+		        <p class="timeline__content-desc">This demonstrates the sales performance of Diageo over a time period and through various partner channels. This way Diageo can look at their sales performance in the past and decide on a projection for forthcoming quarters.</p>
+		      </div>
+		    </div>
+		    <div class="timeline-item" data-text="Self Service BBYD Partner Store Front">
+		      <div class="timeline__content"><img class="timeline__img" src="https://boygeniusreport.files.wordpress.com/2015/11/best-buy-sign-store.jpg?quality=98&strip=all"/>
+		        <h2 class="timeline__content-title"><img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""> <img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""></h2>
+		        <p class="timeline__content-desc">This is a proposal to simplify a Partner registration into Best Buy - B2B Portal and to enable him a speedy smooth sail.</p>
+		      </div>
+		    </div>
+		    <div class="timeline-item" data-text="Secure Supply Chain">
+		      <div class="timeline__content"><img class="timeline__img" src="http://www.cmorgan.com/blog/wp-content/uploads/2017/11/Blockchain-Helps-Improve-Supply-Chain.jpg"/>
+		        <h2 class="timeline__content-title"><img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""> <img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""></h2>
+		        <p class="timeline__content-desc">The data stored for every ingredient that goes into a Food product can be used by the customer in deciding their choice of product. This is demonstrated through blockchain and a front end.</p>
+		      </div>
+		    </div>
+		    <div class="timeline-item" data-text="WMG Automation">
+		      <div class="timeline__content"><img class="timeline__img" src="https://ceriusexecutives.com/wp-content/uploads/2016/01/bigstock-Workforce-Team-Working-Busin-70983127-1.jpg"/>
+		        <h2 class="timeline__content-title"><img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""> <img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""></h2>
+		        <p class="timeline__content-desc">
+							This is to automate the internal resource search by a Wipro WMG Personnel using conversational capability <br>
+									Search based on :<br/>
+									1) Location <br />
+									2) Skill set <br/>
+									3) Band
+		        </p>
+		      </div>
+		    </div>
+				<!--
+		    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+		      <div class="timeline__content"><img class="timeline__img" src="http://sanatkaravani.com/wp-content/uploads/2015/11/ataturk-4.jpg"/>
+		        <h2 class="timeline__content-title"><img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""> <img src="http://via.placeholder.com/75x75" style="border-radius:50%;" alt=""></h2>
+		        <p class="timeline__content-desc">At the end of August 1922, the Turkish armieswon their ultimate victory. Within a few weeks, the Turkish mainland was completelyliberated, the armistice signed, and the rule of the Ottoman dynasty abolished</p>
+		      </div>
+		    </div>
+		    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+		      <div class="timeline__content"><img class="timeline__img" src="https://turkcetarih.com/wp-content/uploads/2015/05/Atat%C3%BCrkveCumhuriyet.jpg"/>
+		        <h2 class="timeline__content-title">1923</h2>
+		        <p class="timeline__content-desc">In July 1923, the national government signed the Lausanne Treaty with Great Britain,France, Greece, Italy, and others. In mid-October, Ankara became the capital of the new Turkish State. On October 29, the Republic was proclaimed and Mustafa Kemal Pasha wasunanimously elected President of the Republic.</p>
+		      </div>
+		    </div>
+		    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+		      <div class="timeline__content"><img class="timeline__img" src="http://pbs.twimg.com/media/Cw69H8pXUAEaSqa.jpg"/>
+		        <h2 class="timeline__content-title">1934</h2>
+		        <p class="timeline__content-desc">
+		          The account of Atatürk's fifteen year Presidency is a saga of dramatic modernization.With indefatigable determination, he created a new political and legal system, abolished the Caliphate and made both government and education secular, gave equal rights to women,changed the alphabet and the attire, and advanced the arts and the sciences, agricultureand industry.
+		          In 1934, when the surname law was adopted, the national parliament gave him the name <i><strong>"Atatürk" (Father of the Turks)</strong></i>
+		        </p>
+		      </div>
+		    </div>
+		    <div class="timeline-item" data-text="FATHER OF THE TURKS">
+		      <div class="timeline__content"><img class="timeline__img" src="http://www.bik.gov.tr/wp-content/uploads/2016/11/20161110_2_20037273_15856882.jpg?fit=1024%2C863"/>
+		        <h2 class="timeline__content-title">1938</h2>
+		        <p class="timeline__content-desc">On November 10, 1938, following an illness of a few months, the national liberator and the Father of modern Turkey died. But his legacy to his people and to the world endures.</p>
+		      </div>
+		    </div> -->
+		  </div>
+		</div>
+
+		</div>
+
+
+
+
+
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src="js/index1.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Owl Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+
+	<!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
+	<script src="js/jquery.style.switcher.js"></script>
+	<!-- End demo purposes only -->
+
+	<!-- Main JS (Do not remove) -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
