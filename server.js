@@ -9,6 +9,6 @@ app.post('/submit', function(req,res){
     res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 
-app.listen(8181, function(){
-    console.log("server is running on 8181");
+app.listen((process.env.PORT || 8000), function() {
+    console.log("Server up and listening");
 });
