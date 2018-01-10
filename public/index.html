@@ -64,6 +64,46 @@
 	    background-color: transparent;
 	    -webkit-border-radius: 6px;
 	}
+	.dropbtn {
+    background-color: rgba(0,0,0,0);
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	}
+
+	.dropdown1 {
+	    position: relative;
+	    display: inline-block;
+	}
+
+	.dropdown1-content {
+	    display: none;
+	    position: absolute;
+	    background-color: rgba(0,0,0,0.6);
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+			border-radius: 2px;
+	}
+
+	.dropdown1-content a {
+	    color: black;
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	}
+
+	.dropdown1-content a:hover {background-color: rgba(0,0,0,0);}
+
+	.dropdown1:hover .dropdown1-content {
+	    display: block;
+	}
+
+	.dropdown1:hover .dropbtn {
+	    background-color: rgba(0,0,0,0);
+			text-decoration: none;
+	}
 	</style>
 	<!-- End demo purposes only -->
 	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
@@ -195,7 +235,15 @@
 								<li><a href="#" data-nav-section="team"><span>Team</span></a></li>
 		            <li><a href="#" data-nav-section="services"><span>Stack & Techs</span></a></li>
 		            <li><a href="#" data-nav-section="testimonials"><span>Projects</span></a></li>
-		            <li><a href="#" data-nav-section=""><span>More</span></a></li>
+								<li style="padding: 10px; margin-top: 11px;">
+									<div class="dropdown1" style="padding:0px; margin:0px;">
+										<a href="#" class="dropbtn" style="text-decoration: none;padding: 0px;"><span>More</span></a>
+									  <div class="dropdown1-content" style="text-color:#454545;">
+									    <a href="#">Gallery</a>
+									    <a href="newsletter.html">Newsletter</a>
+									  </div>
+									</div>
+								</li>
 		          </ul>
 		        </div>
 			    </nav>
