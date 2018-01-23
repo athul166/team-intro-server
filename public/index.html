@@ -115,67 +115,80 @@
 			member1 : {
 				name: "Mohan Kumar",
 				image: "images/Mohan.png",
+				techstack: "",
 				description: "Mohan has 14 years of IT experience working in various facets of technologies. He has played the roles of a Developer,a Middleware Administrator/Architect and a Technical Lead. He is the Technical Point of Contact for the Rapid Solution team and also wears the hat of a Scrum Master. He plays a vital role in making sure the team is equipped with the required logistics to complete a development. "
 			},
 			member2 : {
 				name: "Rubanraj",
 				image: "images/Ruban4.png",
-				description: "Tech Stack - MERN, NLP Platforms, Python"
+				techstack: "Tech Stack - MERN, NLP Platforms, Python",
+				description: "Ruban enjoy designing and developing business logics. Have expertise in full stack development, database designing and architecting micro-services. He aspires to become a data scientist and loves to solve logical algorithms. He is a dedicated, outgoing, and a self-motivated team player"
 			},
 			member3 : {
 				name: "Prateek",
 				image:"images/Prateek.png",
-				description: "Tech Stack - MERN, Docker, NLP Platforms."
+				techstack: "Tech Stack - MERN, Docker, NLP Platforms.",
+				description: " Prateek, proficient on Express and Node and handy with micro-service architecture. Adept in working with NLP engines like DialogFlow and  Alexa. Currently he is diving into Sentimental Analysis using Python and Machine Learning."
 			},
 			member4 : {
 				name: "Shubham",
 				image:"images/Shubham.png",
-				description: "Tech Stack- MERN, Kubernetees, Selenium."
+				techstack: "Tech Stack- MERN, Kubernetees, Selenium.",
+				description: "Shubham is a Full Stack developer in Wipro Digital, working on MERN stack as the base. Building state-of-the-art, easy to use, user-friendly websites and applications with ReactJs is truly a passion of his. He also actively seek out new opportunities in Digital Area."
 			},
 			member5 : {
 				name: "Srini",
 				image:"images/Srini1.png",
-				description: "Tech Stack - MERN, UI/UX Design, Redux, Neo4J."
+				techstack: "Tech Stack - MERN, UI/UX Design, Redux, Neo4J.",
+				description: "Srini is an autodidact full stack developer and he is very passionate in creating innovative web-designs and web-apps.He is pro in Redux, which is state management libary.He is philomath on new technologies and a sophophilic in designing micro services and Neo4j architecture."
 			},
 			member6 : {
 				name: "Athul",
 				image:"images/Athul1.png",
-				description: "MERN, Docker, RabbitMQ, UX/UI Design, PS."
+				techstack: "Tech Stack - MERN, Docker, RabbitMQ, UX/UI Design, PS.",
+				description: "A full stack developer with a base stack of MERN. Interested in UI/UX design. He is also venturing into web development using Python and Django."
 			},
 			member7 : {
 				name: "Akila",
 				image:"images/Akila3.png",
-				description: "Tech Stack - MERN, Docker, Jenkins, RabbitMQ"
+				techstack: "Tech Stack - MERN, Docker, Jenkins, RabbitMQ",
+				description: "A full stack developer. She is a dabhand in managing queues using rabbitmq. She is currently working on achieving expertise in DevOps tools like Jenkins, Docker, Chef and Puppet. She is growing to become a go-to person for DevOps at Wipro Digital."
 			},
 			member8 : {
 				name: "Tharun",
 				image:"images/tarun.png",
-				description: "Tech Stack - MERN, AWS (EC2), Saucelabs, Blaizemeter."
+				techstack: "Tech Stack - MERN, AWS (EC2), Saucelabs, Blaizemeter.",
+				description: "Tarun, a programmer from wipro digital, who is good at developing mobile and web based applications. He is venturing into cloud computing with current foot prints in AWS cloud and is also a full stack developer..."
 			},
 			member9 : {
 				name: "Navin",
 				image:"images/navin.png",
-				description: "Tech Stack - MERN, Cloud computing, SonarQube."
+				techstack: "Tech Stack - MERN, Cloud computing, SonarQube.",
+				description: "Navin is a Full Stack Developer. He has worked with SonarQube and has gained appreciative knowledge on Cloud Computing working with AWS and Azure. He is also good at building apps using ReactJS"
 			},
 			member10 : {
 				name: "Aswini K",
 				image:"images/aswini2.png",
-				description: "MERN, Avaamo, Mocha, Chai, Supertest."
+				techstack: "MERN, Avaamo, Mocha, Chai, Supertest.",
+				description: "Aswini has a good flair for front end designing. She has also worked a lot in the unit testing area with latest tools and loves designing no SQL database . Currently she is onto mastering Avaaamo chat bot."
 			},
 			member11 : {
 				name: "Aswini H",
 				image:"images/aswini.png",
-				description: "Tech Stack - MERN, Grommet, Selinium, Packery, Blockchain."
+				techstack: "Tech Stack - MERN, Grommet, Selinium, Packery, Blockchain.",
+				description: "A full stack developer . She is good at ReactJS and NodeJS. She loves to leverage digital technologies for maximum results in her work . She is now working on polishing her skills in the field of block chain technology."
 			},
 			member12 : {
 				name: "Manisha",
 				image:"images/manisha1.png",
-				description: "Tech Stack - MERN, Python."
+				techstack: "Tech Stack - MERN, Python.",
+				description: ""
 			},
 			member13 : {
 				name: "Lakhveer",
 				image:"images/lakveer.png",
-				description: "Tech Stack - MERN, Java."
+				techstack: "Tech Stack - MERN, Java.",
+				description: "Lakhveer, a Java developer with an add on experience of MERN stack. Adept at expediting project tasks. She is constantly learning and implementing the solutions to achieve greater heights. She loves to explore web technologies."
 			}
 		}
 		window.memberSwap = function(clicked_id,source,name){
@@ -190,6 +203,7 @@
 					// alert(info[member].name);
 					document.getElementById('modalname').innerHTML = info[member].name;
 					document.getElementById('modaldescription').innerHTML = info[member].description;
+					document.getElementById('techstack').innerHTML = info[member].techstack;
 					document.getElementById('P1').innerHTML= info[member].name;
 				}
 			}
@@ -216,7 +230,7 @@
 	<![endif]-->
 
 	</head>
-	<body>
+	<body style="overflow-x: hidden;">
 	<header role="banner" id="fh5co-header">
 			<div class="container">
 				<!-- <div class="row"> -->
@@ -239,7 +253,7 @@
 									<div class="dropdown1" style="padding:0px; margin:0px;">
 										<a href="#" class="dropbtn" style="text-decoration: none;padding: 0px;"><span>More</span></a>
 									  <div class="dropdown1-content" style="text-color:#454545;">
-									    <a href="#">Gallery</a>
+									    <a href="gallery.html">Gallery</a>
 									    <a href="newsletter.html">Newsletter</a>
 									  </div>
 									</div>
@@ -262,7 +276,7 @@
 								<div class="fh5co-owl-text-wrap">
 									<div class="fh5co-owl-text">
 										<!-- <h1 class="fh5co-lead to-animate">Who are we?</h1> -->
-										<h2 class="fh5co-sub-lead to-animate">We are a Young result-oriented team with the hunger level of a start up …</h3>
+										<h2 class="fh5co-sub-lead to-animate">We are a Young result-oriented team with the hunger level of a start up…</h3>
 											<!-- <p class="to-animate-2"><a href="http://freehtml5.co/" target="_blank" class="btn btn-primary btn-lg">Download This Template</a></p> --><br/>
 										<!-- <p class="to-animate" style="color:#fff;font-weight: 100;">Why “Flash Ninjas”? – because we are agile and swift like a ninja, and we develop solutions in a flash.</p> -->
 									</div>
@@ -276,11 +290,11 @@
 					<div class="overlay"></div>
 		    	<div class="container" style="position: relative;">
 		    		<div class="row">
-		    			<div class="col-md-7 col-md-push-1 col-md-push-5 col-sm-7 col-sm-push-1 col-sm-push-5">
+		    			<div class="col-md-10 col-md-offset-1 text-center">
 			    			<div class="fh5co-owl-text-wrap">
 						    	<div class="fh5co-owl-text">
-						    		<h1 class="fh5co-lead to-animate">Rapid Prototyping Team</h1>
-										<h2 class="fh5co-sub-lead to-animate"> Building solution to real world business problems of our customers under Customer BU, using an agile, iterative methodology to demonstrate the art of possible.</h3>
+						    		<!-- <h1 class="fh5co-lead to-animate" style="opacity:0.1;">Rapid Prototyping Team</h1> -->
+										<h2 class="fh5co-sub-lead to-animate">We build solution to real world business problems of our customers under Customer BU, using an agile, iterative methodology to demonstrate the art of possible.</h3>
 									</div>
 						    </div>
 					    </div>
@@ -296,7 +310,77 @@
 					<h2 class="to-animate" style="color:#000;">How To Engage</h3>
 				</div>
 			</div>
-			<div class="row" style="margin-left: 40px;">
+			<div class="row" style="text-align:center;">
+				<div class="col-md-2 to-animate col-xs-6">
+					<div class="row">
+						<img src="./images/circle.png" class="img-responsive" alt="" style="border-radius:50%; padding:20px;">
+					</div>
+					<div class="row" style="font-weight:bold; margin-top: 10px;">
+						1. Opportunity Submission
+					</div>
+					<div class="row" style="font-size: 15px;">
+						Opportunity owner/ Digital partner submits the opportunity online.
+					</div>
+				</div>
+				<div class="col-md-2 to-animate col-xs-6">
+					<div class="row">
+						<img src="./images/circle1.png" class="img-responsive" alt="" style="border-radius:50%; padding:20px;">
+					</div>
+					<div class="row" style="font-weight:bold; margin-top: 10px;">
+						2. Approval
+					</div>
+					<div class="row" style="font-size: 15px;">
+						Opportunity is approved <br>based on the Business Value, Feasibility and Financial outcome.
+					</div>
+				</div>
+				<div class="col-md-2 to-animate col-xs-6">
+					<div class="row">
+						<img src="./images/circle2.png" class="img-responsive" alt="" style="border-radius:50%; padding:20px;">
+					</div>
+					<div class="row" style="font-weight:bold; margin-top: 10px;">
+						3. Prioritization
+					</div>
+					<div class="row" style="font-size: 15px;">
+						Opportunity is prioritized and added to backlog.
+					</div>
+				</div>
+				<div class="col-md-2 to-animate col-xs-6">
+					<div class="row">
+						<img src="./images/circle3.png" class="img-responsive" alt="" style="border-radius:50%; padding:20px;">
+					</div>
+					<div class="row" style="font-weight:bold; margin-top: 10px;">
+						4. Assignment
+					</div>
+					<div class="row" style="font-size: 15px;">
+						Scrum team is assigned for product implementation.
+					</div>
+				</div>
+				<div class="col-md-2 to-animate col-xs-6">
+					<div class="row">
+						<img src="./images/circle4.png" class="img-responsive" alt="" style="border-radius:50%; padding:20px;">
+					</div>
+					<div class="row" style="font-weight:bold; margin-top: 10px;">
+						5. Delivery and Sign-Off
+					</div>
+					<div class="row" style="font-size: 15px;">
+						Product is delivered to product owner at the end of the sprint.
+					</div>
+				</div>
+				<div class="col-md-2 to-animate col-xs-6">
+					<a href="./opportunitySubmission.html" style="text-decoration:none; color:#7f7f7f;">
+						<div class="row">
+							<img src="./images/arrow1.png" href="./opportunitySubmission.html" class="img-responsive" alt="" style="border-radius:50%; padding:20px;">
+						</div>
+						<div class="row" style="font-weight:bold; margin-top: 10px;">
+							Engage
+						</div>
+						<div class="row" style="font-size: 15px;">
+							To submit an Opportunity, Please click here.
+						</div>
+					</a>
+				</div>
+			</div>
+			<!-- <div class="row" style="margin-left: 40px;">
 					<div class="col-md-5 to-animate">
 							<img src="./images/submit.png" class="img-responsive" alt="">
 					</div>
@@ -322,15 +406,15 @@
 					<div class="col-md-5 col-md-offset-3 to-animate">
 						<img src="./images/deliver.png" class="img-responsive" alt="">
 					</div>
-			</div>
-			<div class="row">
+			</div> -->
+			<!-- <div class="row">
 				<center>
 					<p class="to-animate " style="margin:auto;margin-top:20px;">To engage with the team, Please submit the Opportunity  <a href="./opportunitySubmission.html">here</a></p>
 				</center>
-			</div>
+			</div> -->
 		</div>
 	</div>
-	<div id="fh5co-about-us" data-section="about">
+	<div id="fh5co-about-us" data-section="about" style=" background-color: #e0e0e0;">
 		<div class="container">
 			<div class="row row-bottom-padded-lg" id="about-us">
 				<div class="col-md-12 section-heading text-center">
@@ -345,7 +429,7 @@
 <!-- 					<video width="100%" height="100%" autoplay loop>
 					  <source src="rapsol.mp4" type="video/mp4" />
 					</video> -->
-				<div class="col-md-8 col-sm-12 to-animate">
+				<div class="col-md-8 col-sm-12 col-xs-12 to-animate">
 					<div class="embed-responsive embed-responsive-16by9">
 					  <!-- <iframe src="https://player.vimeo.com/video/249635594"></iframe> -->
 						<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/249900476?loop=1&color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0"></iframe>
@@ -356,7 +440,7 @@
 				</div>
 				<div class="col-md-4 to-animate">
 					<h2>How we got started</h2>
-					<p>A Domain Group was set out to selectively pick and choose talents that can Think dynamic, Work Agile and Deliver accuracy. They hunted through the pool of resources in Wipro and selected a first set of 6 Fresh Talents from Digital Academy. They also selected a person to lead the team who has immense experience in various facets of IT. We started off with a 7 member team in the First week of August 2017 and went on to add 6 more in October 2017. The new 6 are no lesser than the first 6; they were also self-sustained.</p>
+					<p>A charter was set out to selectively pick and choose the best talents that can Think dynamic, Work Agile and Deliver accuracy. They hunted through the pool of resources in Wipro and selected a first set of 6 Fresh Talents from Digital Academy. They also selected a person to lead the team who has immense experience in various facets of IT. We started off with a 7 member team in the First week of August 2017 and went on to add 6 more in October 2017. The new 6 are no lesser than the first 6; they were also self-sustained.</p>
 				</div>
 			</div>
 			<div class="row" id="team"  data-section="team" style="margin-top:0px;" >
@@ -367,25 +451,25 @@
 					<div class="col-md-9 col-md-offset-2 to-animate" style="margin-right: 10px;">
 						<h4 class="to-animate">DIGITAL ENABLERS</h3>
 						<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
-						<div class="col-md-2 text-center to-animate" style="background-color: #EEB436;margin-right:10px;">
+						<div class="col-md-2 text-center to-animate col-xs-4" style="background-color: #EEB436;margin-right:10px;">
 							<img src="images/sunil.png" id="team1" class="img-responsive" alt="Person">
 								<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 							<h5>Sunil Kuruvath</h5>
-							<h5 style="margin-left:-5px;">Digital Delivery Lead</h5>
+							<h5 style="margin-left:0px;">Digital Engg. Lead</h5>
 						</div>
-						<div class="col-md-2 text-center to-animate" style="background-color: #3F46AE; margin-right:10px;">
+						<div class="col-md-2 text-center to-animate  col-xs-4" style="background-color: #3F46AE; margin-right:10px;">
 							<img src="images/random.png" class="img-responsive" alt="Person">
 								<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 							<h5>Ajay Mahajan</h5>
 							<h5>Digital Architect</h5>
 						</div>
-						<div class="col-md-2 text-center to-animate" style="background-color: #4AC29C; margin-right:10px;">
+						<div class="col-md-2 text-center to-animate  col-xs-4" style="background-color: #4AC29C; margin-right:10px;">
 							<img src="images/random.png" class="img-responsive" alt="Person">
 								<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 							<h5>Sanju John</h5>
 							<h5 style="margin-left:-9px;">Engineering Manager</h5>
 						</div>
-						<div class="col-md-2 text-center to-animate" style="background-color: #593853; margin-right:10px;">
+						<div class="col-md-2 text-center to-animate  col-xs-4" style="background-color: #593853; margin-right:10px;">
 							<img src="images/random.png" class="img-responsive" alt="Person">
 								<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 							<h5>Vinoth R</h5>
@@ -398,13 +482,13 @@
 					<div class="col-md-9 col-md-offset-2 to-animate">
 						<h4 class="to-animate">DIGITAL OPERATIONS</h3>
 						<hr class="to-animate" style="height: 10px;border: 0;	box-shadow: 0 10px 10px -10px #8c8b8b inset;">
-						<div class="col-md-2 text-center to-animate" style="background-color: #EEB436;margin-right:10px;">
+						<div class="col-md-2 text-center to-animate  col-xs-4" style="background-color: #EEB436;margin-right:10px;">
 							<img src="images/random.png" id="team1" class="img-responsive" alt="Person">
 							<h5>Sathish</h5>
 							<h5>Digital Operations</h5>
 								<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 						</div>
-						<div class="col-md-2 text-center to-animate" style="background-color: #3F46AE;">
+						<div class="col-md-2 text-center to-animate  col-xs-4" style="background-color: #3F46AE;">
 							<img src="images/sara.png" class="img-responsive" alt="Person">
 							<h5>Sara Cherian</h5>
 							<h5>Digital Operations</h5>
@@ -462,31 +546,32 @@
 										<div class="col-md-6">
 											<h3 id="modalname">Mohan Kumar</h3>
 											<p id="modaldescription">Mohan has 14 years of IT experience working in various facets of technologies. He has played the roles of a Developer,a Middleware Administrator/Architect and a Technical Lead. He is the Technical Point of Contact for the Rapid Solution team and also wears the hat of a Scrum Master. He plays a vital role in making sure the team is equipped with the required logistics to complete a development. </p>
+											<p id="techstack"></p>
 										</div>
 					        </div>
 					      </div>
 					    </div>
 					  </div>
 					</div>
-					<div class="col-md-2 col-md-offset-2 text-center to-animate" style="background-color: #EEB436; margin-right:10px;">
+					<div class="col-md-2 col-md-offset-2 text-center to-animate  col-xs-5" style="background-color: #EEB436; margin-right:10px;">
 						<img src="images/Ruban4.png" id="M1" class="img-responsive" alt="Rubanraj" onclick="memberSwap(this.id,this.src,this.alt);">
 							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 					</div>
-					<div class="col-md-2 text-center to-animate" style="background-color: #3F46AE;margin-right:10px;">
+					<div class="col-md-2 text-center to-animate  col-xs-5" style="background-color: #3F46AE;margin-right:10px;">
 						<img src="images/Prateek.png" id="M2" class="img-responsive" alt="Prateek" onclick="memberSwap(this.id,this.src,this.alt,this.alt);">
 							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 					</div>
-					<div class="col-md-2 text-center to-animate" style="background-color: #593853;margin-right:10px;">
+					<div class="col-md-2 text-center to-animate  col-xs-5" style="background-color: #593853;margin-right:10px;">
 						<img src="images/Shubham.png" id="M3" class="img-responsive" alt="Shubham" onclick="memberSwap(this.id,this.src,this.alt);">
 							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 					</div>
-					<div class="col-md-2 text-center to-animate" style="background-color: #4AC29C;">
+					<div class="col-md-2 text-center to-animate col-xs-5" style="background-color: #4AC29C;">
 						<img src="images/Srini1.png" id="M4" class="img-responsive" alt="Srini" onclick="memberSwap(this.id,this.src,this.alt);">
 							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 					</div>
 				</div>
 				<div class="row">
-						<div class="col-md-2 col-md-offset-2 text-center to-animate" id="hide1" style="margin-right:15px;">
+						<div class="col-md-2 col-md-offset-2 text-center to-animate  col-xs-5" id="hide1" style="margin-right:15px;">
 							<div class="row" style="margin-bottom:30px;">
 								<div class="col-md-12 text-center to-animate" style="background-color: #593853;">
 									<img src="images/Athul1.png" id="M5" class="img-responsive" alt="Athul" onclick="memberSwap(this.id,this.src,this.alt);">
@@ -498,11 +583,11 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 text-center to-animate grow"  style="background-color: #ffbb00;margin-right:15px;" data-toggle="modal" data-target="#myModal">
+						<div class="col-md-4 text-center to-animate grow  col-xs-5"  style="background-color: #ffbb00;margin-right:15px;" data-toggle="modal" data-target="#myModal">
 							<img src="images/Mohan.png" id="M13" class="img-responsive" alt="Mohan Kumar">
 							<p id="P1" style="margin-top: -50px;">Mohan Kumar</p>
 						</div>
-						<div class="col-md-2 text-center to-animate" id="hide2">
+						<div class="col-md-2 text-center to-animate  col-xs-5" id="hide2">
 							<div class="row" style="margin-bottom:30px;">
 								<div class="col-md-12 text-center to-animate" style="background-color: #593853;">
 									<img src="images/Akila3.png" id="M7" class="img-responsive" alt="Akila" onclick="memberSwap(this.id,this.src,this.alt);">
@@ -516,19 +601,19 @@
 						</div>
 				</div>
 				<div class="row" style="margin-top:10px;">
-					<div class="col-md-2 col-md-offset-2 text-center to-animate" style="background-color: #EEB436; margin-right:10px;">
+					<div class="col-md-2 col-md-offset-2 text-center to-animate col-xs-5" style="background-color: #EEB436; margin-right:10px;">
 						<img src="images/tarun.png" id="M9" class="img-responsive" alt="Tharun" onclick="memberSwap(this.id,this.src,this.alt);">
 							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 					</div>
-					<div class="col-md-2 text-center to-animate" style="background-color: #3F46AE;margin-right:10px;">
+					<div class="col-md-2 text-center to-animate col-xs-5" style="background-color: #3F46AE;margin-right:10px;">
 						<img src="images/aswini2.png" id="M10" class="img-responsive" alt="Aswini K" onclick="memberSwap(this.id,this.src,this.alt);">
 							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 					</div>
-					<div class="col-md-2 text-center to-animate" style="background-color: #593853;margin-right:10px;">
+					<div class="col-md-2 text-center to-animate col-xs-5" style="background-color: #593853;margin-right:10px;">
 						<img src="images/manisha1.png" id="M11" class="img-responsive" alt="Manisha" onclick="memberSwap(this.id,this.src,this.alt);">
 							<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p> -->
 					</div>
-					<div class="col-md-2 text-center to-animate" style="background-color: #4AC29C;">
+					<div class="col-md-2 text-center to-animate col-xs-5" style="background-color: #4AC29C;">
 						<img src="images/lakveer.png" id="M12" class="img-responsive" alt="Lakhveer" onclick="memberSwap(this.id,this.src,this.alt);">
 					</div>
 				</div>

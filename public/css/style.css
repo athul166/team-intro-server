@@ -1075,6 +1075,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 42px;
   font-weight: 100;
   margin-bottom: 0px;
+  margin-top: 250px !important;
   color: white;
 }
 @media screen and (max-width: 768px) {
